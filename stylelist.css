@@ -1,0 +1,138 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(248, 247, 247);
+}
+
+h4 {
+    font-weight: 600;
+    font-size: larger;
+}
+
+/* Header */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: white;
+    overflow: hidden;
+}
+
+nav img {
+    margin-left: 35px;
+    height: 50px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    font-weight: 600;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: larger;
+    color: black;
+    padding: 40px;
+}
+
+nav a:hover {
+    background-color: rgb(223, 223, 223);
+}
+/* END of header */
+
+/* Search Bar */
+.search-bar {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    height: 80px;
+    padding-left: 30px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+}
+
+.search-bar input {
+    margin: 16px;
+    padding: 5px;
+    outline: none;
+    border: none;
+    height: 30px;
+    width: 200px;
+    background-color: rgb(248, 247, 247);
+}
+
+.search-bar input:hover {
+    background-color: rgb(224, 224, 224);
+}
+/* END of Search Bar */
+
+
+.job-container {
+    font-size: large;
+    display: flex;
+    margin: 16px 30px;
+}
+
+/* Detail Checkbox Search */
+
+.search-checkbox {
+    height: 100vh;
+    width: 230px;
+    padding: 16px;
+
+}
+
+.search-checkbox span {
+    font-size: medium;
+    color: grey;
+}
+
+.search-checkbox label {
+    font-size: smaller;
+}
+
+.search-checkbox hr {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+/* END of Detail Search */
+
+
+.jobcards {
+    height: 100vh;
+    width: 100vw;
+    padding: 16px;
+    margin-left: 30px;
+}
+
+.jobcards h4 {
+    margin-left: 30px;
+}
+
+.card-containers {
+    display: flex;
+}
+
+
+
+
+/* Job Cards */
+
+.card-containers .card {
+    margin: 30px;
+
+}
+
+.card img {
+    height: 170px;
+}
+
+.card a {
+    text-decoration: none;
+}
+/* END of Job Cards */
