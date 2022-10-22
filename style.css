@@ -7,53 +7,45 @@
     text-decoration: none;
     list-style: none;
     font-family: "Poppins", sans-serif;
-    color: black;
   }
   
   body {
     background-color: #fff;
+    margin: 0px;
   }
   
-  /* NAVBAR */
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 30px;
-    position: center;
-  }
-  
-  .logo {
-    width: 50px;
-  }
-  
-  ul {
-    display: flex;
-  }
-  
-  ul li {
-    margin: 0 10px;
-    font-weight: 600;
-    font-size: 14px;
-  }
-  
-  ul li a {
-    padding: 8px 10px;
-    border-radius: 35px;
-  }
+  /* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  background-color: white;
+  overflow: hidden;
+}
 
-  @media (max-width: 600px) {
-    .menu {
-        display: none;
-    }
+nav img {
+  margin-left: 35px;
+  height: 50px;
+}
 
-    .toggle-menu {
-        background-image: url("menu.png");
-        width: 100px;
-        height: 100px;
-        background-repeat: no-repeat;
-    }
-  }
+nav ul {
+  display: flex;
+  list-style: none;
+  font-weight: 600;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: larger;
+  color: black;
+  padding: 30px;
+}
+
+nav a:hover {
+  background-color: rgb(223, 223, 223);
+}
+/* END of Navbar */
 
   
 /* HOME */
@@ -61,19 +53,19 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 50px 50px;
-    margin-top: 10px;
-    margin-bottom: 150px;
-    background-color: paleturquoise;
+    padding: 40px 50px;
+    background-color: rgb(60, 96, 164);
+    color: #fff;
   }
   
   .home-text h1 {
     font-size: 60px;
   }
-  .home-text p {
-    font-size: 16px;
-    margin-bottom: 50px;
+  .home-text h2 {
+    margin-bottom: 40px;
+    margin-right: 70px;
     text-align: justify;
+    font-size: 20px;
   }
   
   .home-text span {
@@ -82,10 +74,11 @@
   
   .home-text a {
     font-size: px;
-    background-color: rgb(60, 96, 164);
-    padding: 20px 40px;
-    color: #fff;
-    border-radius: 50px;
+    background-color: #fff;
+    padding: 10px 20px;
+    color: rgb(58, 72, 98);
+    border-radius: 10px;
+    text-decoration: none;
   }
   
   .home-text a:focus {
@@ -93,11 +86,85 @@
     text-decoration: underline;
   }
 
+  /* JOB CONTAINER
+  .jobscontainer {
+    display:flex;
+    justify-content: center;
+  } */
+
   /*CONTACT*/
   .contact {
-    background-color: paleturquoise;
+    background-color: rgb(60, 96, 164);
     padding: 20px 50px;
     display: flex;
     justify-content: space-between;
   }
+
+  /* jobcards */
+.jobcards {
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    padding:70px; 
+}
+
+.jobcards h4 {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.jobcards a {
+  margin-top: 200px;
+  text-align: center;
+}
+
+.card-containers {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.card-containers .card {
+    margin: 30px;
+    width: 18rem;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+
+.list-group-item {
+    font-size: medium;
+}
+
+.card img {
+    height: 170px;
+    padding: 1rem;
+    object-fit: contain;
+}
+
+.card a {
+    color: #fcfbff;
+    font-size: small;
+    text-decoration: none;
+    background-color: rgb(60, 96, 164);
+    padding: 10px;
+    border-radius: 15px;
+    width: 80px;
+    text-align: center;
+}
+
+.card a:hover {
+    color: white;
+    background-color: rgb(60, 96, 164);
+}
+
+.card-body{
+    background-color: #fcfbff;
+    height: 65px;
+    display: flex;
+    align-items: center;
+}
+
+
   
