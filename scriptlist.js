@@ -1,6 +1,7 @@
 let API_URL = "https://6352a30bd0bca53a8eb145bc.mockapi.io/api/v1/joblist"
 let jobContainer = document.querySelector('.card-containers'); 
 const form = document.getElementById('form');
+const checkform = document.getElementById('form');
 
 // https://6352a30bd0bca53a8eb145bc.mockapi.io/api/v1/joblist?${idsearch}=${value}
 
@@ -42,8 +43,13 @@ getJobs(API_URL)
 
 
 // Search function
-form.addEventListener('input', (e) => {
+form.addEventListener('input', async (e) => {
     e.preventDefault();
+
+    // const GET = await fetch(API_URL)
+    // const array = await GET.json()
+    // const data = array.filter(x => x.nama == document.getElementById('nama').value && x.lokasi == document.getElementById('lokasi').value && x.namaPerusahaan == document.getElementById('perusahaan').value && x.kategori == document.getElementById('kategori').value)
+    // console.log(data)
 
     const searchName = document.getElementById('nama').value;
     const searchLocation = document.getElementById('lokasi').value;

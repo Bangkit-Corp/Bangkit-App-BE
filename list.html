@@ -24,12 +24,13 @@
         <input type="text" id="nama" placeholder="Role">
         <input type="text" id="lokasi" placeholder="Location">
         <input type="text" id="perusahaan" placeholder="Company">
-        <select id="kategori" placeholder="Category">
+        <select id="kategori" placeholder="Category" style="margin: 3rem;">
           <option value=" ">Category</option>
           <option value="Akuntansi">Akuntansi</option>
-          <option value="Akuntansi">IT</option>
+          <option value="IT">IT</option>
+          <option value="Pelayanan">Pelayanan</option>
         </select>
-        <input type="range" id="salary" placeholder="Salary">
+        <input type="range" id="salary" min="0" value=" " max="100.000.000">
     </div>
     </form>
 
@@ -38,6 +39,7 @@
             <h4>Details</h4>
             <hr>
             <span>Schedule</span><br>
+            <form id="checkform">
             <input type="checkbox" id="fulltime">
             <label for="fulltime">Full Time</label><br>
             <input type="checkbox" id="parttime">
@@ -56,6 +58,7 @@
             <label for="Senior">Doktor (S3)</label><br>
             <input type="checkbox" id="none">
             <label for="none">No Qualification</label><br>
+            </form>
             <hr>
         </div>
 
