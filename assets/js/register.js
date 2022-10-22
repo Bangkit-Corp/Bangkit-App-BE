@@ -16,7 +16,7 @@ async function register() {
 			return Swal.fire("Error", "Password Tidak Sama!", "error");
 		}
 	} else {
-		return alert("Input Data!");
+		return Swal.fire("Error", "Password Tidak Sama!", "error");
 	}
 
 	let dataCheck = await fetch(`https://6350b8e978563c1d82c6c2d8.mockapi.io/api/v1/users`);
