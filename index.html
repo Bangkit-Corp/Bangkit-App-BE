@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dashboard</title>
+
+		<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	</head>
+	<body>
+		<div id="data"></div>
+		<button onclick="logout()">Logout</button>
+		<script src="./assets/js/script.js"></script>
+		<script>
+			fetch(`https://6352a30bd0bca53a8eb145bc.mockapi.io/api/v1/joblist`)
+				.then((res) => res.json())
+				.then((res) => {
+					console.log(res);
+					let data = document.getElementById("data");
+					data.innerText = res[11].deskripsi;
+				});
+		</script>
+	</body>
+</html>

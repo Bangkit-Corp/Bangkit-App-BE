@@ -1,0 +1,46 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body {
+	background-color: blueviolet;
+	font-family: "Poppins", sans-serif;
+}
+
+.input-form {
+	width: 81%;
+	padding: 30px 28px;
+	border: 1px solid rgba(0, 0, 0, 0.5);
+	box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+	border-radius: 8px;
+}
+
+label {
+	font-weight: 500;
+}
+
+.btn-login:hover {
+	color: #fff;
+	background-color: #360936;
+}
+
+.btn-login {
+	width: 100%;
+	background-color: blueviolet;
+	color: #fff;
+	padding: 6px 12px;
+	border-radius: 8px;
+	border: none;
+}
+
+.text-bg {
+	color: blueviolet;
+}
+
+.form-text a {
+	text-decoration: none;
+}
