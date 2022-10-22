@@ -8,7 +8,7 @@ h4 {
     font-size: larger;
 }
 
-/* Header */
+/* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -39,7 +39,7 @@ nav a {
 nav a:hover {
     background-color: rgb(223, 223, 223);
 }
-/* END of header */
+/* END of Navbar */
 
 /* Search Bar */
 .search-bar {
@@ -144,16 +144,18 @@ nav a:hover {
 
 .card a {
     color: #fcfbff;
-    font-size: medium;
+    font-size: small;
     text-decoration: none;
-    background-color: #406ddf;
+    background-color: blueviolet;
     padding: 10px;
     border-radius: 15px;
+    width: 80px;
+    text-align: center;
 }
 
 .card a:hover {
     color: white;
-    background-color: #345bbe;
+    background-color: rgb(92, 25, 155);
 }
 
 .card-body{

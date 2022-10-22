@@ -9,6 +9,10 @@ async function getJobs(url) {
     let response = await fetch(url)
     let result = await response.json()
     console.log(result)
+    showJobs(result)
+}
+
+function showJobs (result) {
     jobContainer.innerHTML = '';
 
     result.forEach(jobs => {
@@ -34,7 +38,11 @@ async function getJobs(url) {
         jobContainer.appendChild(jobElement)
     })
 }
+
+
 getJobs(API_URL)
+
+
 
 // search function
 
