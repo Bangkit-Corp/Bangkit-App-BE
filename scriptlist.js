@@ -2,9 +2,10 @@ let API_URL = "https://6352a30bd0bca53a8eb145bc.mockapi.io/api/v1/joblist"
 let jobContainer = document.querySelector('.card-containers'); 
 const form = document.getElementById('form');
 
+// https://6352a30bd0bca53a8eb145bc.mockapi.io/api/v1/joblist?${idsearch}=${value}
+
 
 // munculkan job listing dari API 
-
 async function getJobs(url) {
     let response = await fetch(url)
     let result = await response.json()
@@ -16,7 +17,7 @@ function showJobs (result) {
     jobContainer.innerHTML = '';
 
     result.forEach(jobs => {
-        const{gaji, jenisPekerjaan, kategori, kualifikasi, logo, lokasi, nama, namaPerusahaan} = jobs;
+        const{gaji, jenisPekerjaan, kategori, kualifikasi, logo, lokasi, nama, namaPerusahaan, id} = jobs;
         const jobElement = document.createElement('div');
         jobElement.classList.add('card')
         jobElement.innerHTML = `
@@ -31,7 +32,7 @@ function showJobs (result) {
                   <li class="list-group-item" style="color: rgb(73, 73, 73)">${lokasi}</li>
                 </ul>
                 <div class="card-body bottom">
-                  <a href="#" class="card-link">Apply</a>
+                  <a href="detailJob.html?id=${id}" class="card-link">Apply</a>
                 </div>
         `
         jobContainer.appendChild(jobElement)
@@ -63,8 +64,9 @@ form.addEventListener('input', (e) => {
 })
 
 
+// Search Checkbox
 
-// https://6352a30bd0bca53a8eb145bc.mockapi.io/api/v1/joblist?${idsearch}=${value}
+
 
 
 

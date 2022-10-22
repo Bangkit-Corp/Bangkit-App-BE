@@ -52,7 +52,7 @@ nav a:hover {
     box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
 }
 
-.search-bar input {
+.search-bar input, select {
     margin: 2rem;
     padding: 5px;
     outline: none;
