@@ -6,7 +6,7 @@ async function getDetailJob() {
     let URL = "https://6352a30bd0bca53a8eb145bc.mockapi.io/api/v1/joblist"
     let response = await fetch(URL)
     let result = await response.json()
-    console.log(result)    
+    console.log(result)
 
     result.slice(0, 1).forEach((item, index) => {
         // Top Detail: Job Company Profile
@@ -54,5 +54,14 @@ async function getDetailJob() {
         </div>`        
     })
 }
+
+// Detail Job by ID
+// function getDetailByID(id){
+//     const queryUrl = window.location.search
+//     const urlParams = new URLSearchParams(queryUrl)
+//     const getDetailID = urlParams.get(id)
+//     return getDetailID
+// }
+// console.log(getDetailByID("id"));
 
 getDetailJob()
