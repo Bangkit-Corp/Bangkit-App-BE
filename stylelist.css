@@ -39,6 +39,7 @@ nav a {
 nav a:hover {
     background-color: rgb(223, 223, 223);
 }
+
 /* END of Navbar */
 
 /* Search Bar */
@@ -164,8 +165,6 @@ nav a:hover {
     display: flex;
     align-items: center;
 }
-
-
 
 
 /* END of Job Cards */
