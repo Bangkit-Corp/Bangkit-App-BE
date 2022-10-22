@@ -146,7 +146,7 @@ nav a:hover {
     color: #fcfbff;
     font-size: small;
     text-decoration: none;
-    background-color: blueviolet;
+    background-color: rgb(60, 96, 164);
     padding: 10px;
     border-radius: 15px;
     width: 80px;
@@ -155,7 +155,7 @@ nav a:hover {
 
 .card a:hover {
     color: white;
-    background-color: rgb(92, 25, 155);
+    background-color: rgb(30, 55, 116);
 }
 
 .card-body{

@@ -1,6 +1,6 @@
 let API_URL = "https://6352a30bd0bca53a8eb145bc.mockapi.io/api/v1/joblist"
-let jobContainer = document.querySelector('.card-containers') 
-
+let jobContainer = document.querySelector('.card-containers'); 
+const form = document.getElementById('form');
 
 
 // munculkan job listing dari API 
@@ -34,20 +34,37 @@ function showJobs (result) {
                   <a href="#" class="card-link">Apply</a>
                 </div>
         `
-        
         jobContainer.appendChild(jobElement)
     })
 }
-
-
 getJobs(API_URL)
 
 
+// Search function
+form.addEventListener('input', (e) => {
+    e.preventDefault();
 
-// search function
+    const searchName = document.getElementById('nama').value;
+    const searchLocation = document.getElementById('lokasi').value;
+    const searchCompany = document.getElementById('perusahaan').value;
+    const searchCategory = document.getElementById('kategori').value;
+
+    if(searchName) {
+        getJobs(API_URL+'?nama='+searchName)
+    } else if(searchLocation) {
+        getJobs(API_URL+'?lokasi='+searchLocation)
+    } else if(searchCompany) {
+        getJobs(API_URL+'?namaPerusahaan='+searchCompany)
+    } else if(searchCategory) {
+        getJobs(API_URL+'?kategori='+searchCategory)
+    } else {
+        getJobs(API_URL);
+    }
+})
 
 
 
+// https://6352a30bd0bca53a8eb145bc.mockapi.io/api/v1/joblist?${idsearch}=${value}
 
 
 
