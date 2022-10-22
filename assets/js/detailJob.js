@@ -3,12 +3,12 @@ detailBottom = document.getElementById("job-bottom")
 detailAside = document.getElementById("job-aside")
 
 async function getDetailJob() {
-    let URL = "https://6352a30bd0bca53a8eb145bc.mockapi.io/api/v1/joblist"
+    let URL = "https://6352a30bd0bca53a8eb145bc.mockapi.io/api/v1/joblist/" + getDetailByID("id")
     let response = await fetch(URL)
     let result = await response.json()
     console.log(result)
-
-    result.slice(0, 1).forEach((item, index) => {
+    let array = [result]
+    array.forEach((item, index) => {
         // Top Detail: Job Company Profile
         detailTop.innerHTML += 
         `<div class="card border-light mb-3">
@@ -19,7 +19,7 @@ async function getDetailJob() {
                     <div class="me-auto p-2">
                         <h4 class="card-title">${item.nama}</h4>
                         <p class="card-text">${item.namaPerusahaan}</p>
-                        <a href="#" class="card-link">${item.lokasi}</a><span class="text-muted">, Indonesia</span>
+                        <a href="#" class="card-link" style="text-decoration: none;">${item.lokasi}</a><span class="text-muted">, Indonesia</span>
                         <p class="card-text"><small class="text-muted">Posted at ${item.createdAt}</small></p>
                     </div>                            
                     <div class="p-2" style="margin-top: 80px;">
@@ -31,10 +31,10 @@ async function getDetailJob() {
         
         // Buttom Detail: Job Description
         detailBottom.innerHTML +=
-        `<div class="card border-light mb-3">
-            <div class="card-body">                
-                <h5 class="card-title">Job Description</h5>
-                <p class="card-text">${item.deskripsi}</p>
+        `<div class="card border-light mb-5">
+            <div class="card-body" >                
+                <h5 class="card-title pb-3">Job Description</h5>
+                <p class="card-text pb-3" >${item.deskripsi.replaceAll('\n', '<br>')}</p>
             </div>
         </div>`
 
@@ -56,12 +56,12 @@ async function getDetailJob() {
 }
 
 // Detail Job by ID
-// function getDetailByID(id){
-//     const queryUrl = window.location.search
-//     const urlParams = new URLSearchParams(queryUrl)
-//     const getDetailID = urlParams.get(id)
-//     return getDetailID
-// }
-// console.log(getDetailByID("id"));
+function getDetailByID(id){
+    const queryUrl = window.location.search
+    const urlParams = new URLSearchParams(queryUrl)
+    const getDetailID = urlParams.get(id)
+    return getDetailID
+}
+console.log(getDetailByID("id"));
 
 getDetailJob()

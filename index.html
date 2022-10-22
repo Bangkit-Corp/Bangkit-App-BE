@@ -18,7 +18,7 @@
 				.then((res) => {
 					console.log(res);
 					let data = document.getElementById("data");
-					data.innerText = res[11].deskripsi;
+					data.innerHTML =  `<p>${res[11].deskripsi};</p>`
 				});
 		</script>
 	</body>
