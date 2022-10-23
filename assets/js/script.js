@@ -25,6 +25,7 @@ window.onload = function () {
 	checkUserSession();
 	if (pengguna_sekarang != null) {
 		document.getElementById("ini_login").remove();
+		document.getElementById("section_register").remove();
 	} else {
 		document.getElementById("ini_logout").remove();
 	}

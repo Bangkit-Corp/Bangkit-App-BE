@@ -9,7 +9,7 @@ async function login() {
 	if (findIndex !== -1) {
 		if (arr[findIndex].password == password) {
 			sessionStorage.setItem("User", JSON.stringify({ email, password }));
-			return (window.location = "home.html");
+			return (window.location = "index.html");
 		} else {
 			return Swal.fire("Error", "Password atau Email Salah", "error");
 		}
@@ -25,6 +25,6 @@ function checkUserSession() {
 window.onload = function () {
 	checkUserSession();
 	if (pengguna_sekarang != null) {
-		window.location = "home.html";
+		window.location = "index.html";
 	}
 };
