@@ -45,145 +45,152 @@ label {
 	text-decoration: none;
 }
 
-
-
 /* List Page Styles */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: rgb(248, 247, 247);
+	font-family: "Poppins", sans-serif;
+	background-color: rgb(248, 247, 247);
 }
 
 h4 {
-    font-weight: 600;
-    font-size: larger;
+	font-weight: 600;
+	font-size: larger;
 }
-
 
 /* Search Bar */
 .search-bar {
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
-    height: 80px;
-    padding-left: 45px;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	display: flex;
+	align-items: center;
+	height: 80px;
+	padding-left: 45px;
+	background-color: white;
+	box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
 }
 
-.search-bar input, select {
-    margin: 3rem;
-    padding: 5px;
-    outline: none;
-    border: none;
-    height: 40px;
-    width: 200px;
-    background-color: rgb(236, 236, 236);
+.search-bar input,
+select {
+	margin: 3rem;
+	padding: 5px;
+	outline: none;
+	border: none;
+	height: 40px;
+	width: 200px;
+	background-color: rgb(236, 236, 236);
 }
 
 .search-bar input:hover {
-    background-color: rgb(221, 221, 221);
+	background-color: rgb(221, 221, 221);
 }
 /* END of Search Bar */
 
-
 .job-container {
-    font-size: large;
-    display: flex;
-    margin: 16px 30px;
+	font-size: large;
+	display: flex;
+	margin: 16px 30px;
 }
-
 
 /* Detail Checkbox Search */
 .search-checkbox {
-    height: 100vh;
-    width: 230px;
-    padding: 16px;
-    margin-left: 50px;
+	height: 100vh;
+	width: 230px;
+	padding: 16px;
+	margin-left: 50px;
 }
 
 .search-checkbox span {
-    font-size: medium;
-    color: grey;
+	font-size: medium;
+	color: grey;
 }
 
 .search-checkbox label {
-    font-size: smaller;
+	font-size: smaller;
 }
 
 .search-checkbox hr {
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+	border: 0;
+	height: 0;
+	border-top: 1px solid rgba(0, 0, 0, 0.1);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 #clearsearch-button {
-    margin: 2rem;
+	margin: 2rem;
 }
 /* END of Detail Search */
 
-
 .jobcards {
-    height: 100vh;
-    width: 100vw;
-    padding: 16px;
-    margin-left: 30px;
+	height: 100vh;
+	width: 100vw;
+	padding: 16px;
+	margin-left: 30px;
 }
 
 .jobcards h4 {
-    margin-left: 30px;
+	margin-left: 30px;
 }
 
 .card-containers {
-    display: flex;
-    flex-wrap: wrap;
+	display: flex;
+	flex-wrap: wrap;
 }
-
-
 
 /* Job Cards */
 
 .card-containers .card {
-    margin: 20px;
-    width: 18rem;
-    overflow: hidden;
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+	margin: 20px;
+	width: 18rem;
+	overflow: hidden;
+	border-radius: 15px;
+	box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
 }
 
-
 .list-group-item {
-    font-size: medium;
+	font-size: medium;
 }
 
 .card img {
-    height: 170px;
-    padding: 1rem;
-    object-fit: contain;
+	height: 170px;
+	padding: 1rem;
+	object-fit: contain;
 }
 
 .card a {
-    color: #fcfbff;
-    font-size: small;
-    text-decoration: none;
-    background-color: rgb(60, 96, 164);
-    padding: 10px;
-    border-radius: 15px;
-    width: 80px;
-    text-align: center;
+	color: #fcfbff;
+	font-size: small;
+	text-decoration: none;
+	background-color: rgb(60, 96, 164);
+	padding: 10px;
+	border-radius: 15px;
+	width: 80px;
+	text-align: center;
 }
 
 .card a:hover {
-    color: white;
-    background-color: rgb(30, 55, 116);
+	color: white;
+	background-color: rgb(30, 55, 116);
 }
 
-.card-body{
-    background-color: #fcfbff;
-    height: 65px;
-    display: flex;
-    align-items: center;
+.card-body {
+	background-color: #fcfbff;
+	height: 65px;
+	display: flex;
+	align-items: center;
 }
-
 
 /* END of Job Cards */
+
+@media (max-width: 1250px) {
+	.search-bar input {
+		margin: 1rem;
+		width: 50px;
+	}
+}
+
+@media (max-width: 1200px) {
+	.footer footer #section_register {
+		visibility: hidden;
+		/* display: flex;
+		flex-direction: column;
+		justify-content: flex-end; */
+	}
+}
