@@ -1,8 +1,6 @@
-// let pengguna_sekarang = null;
-
-detailTop = document.getElementById("job-top");
-detailBottom = document.getElementById("job-bottom");
-detailAside = document.getElementById("job-aside");
+let detailTop = document.getElementById("job-top");
+let detailBottom = document.getElementById("job-bottom");
+let detailAside = document.getElementById("job-aside");
 
 async function getDetailJob() {
 	let URL = "https://6352a30bd0bca53a8eb145bc.mockapi.io/api/v1/joblist/" + getDetailByID("id");
@@ -24,15 +22,43 @@ async function getDetailJob() {
                         <p class="card-text"><small class="text-muted">Posted at ${item.createdAt}</small></p>
                     </div>                            
                     <div class="p-2" style="margin-top: 80px;">
-                        <a href="mailto:${item.kontak}?subject=[BANGKIT] Halo ${item.namaPerusahaan} saya ingin melamar&body = Message" class="btn btn-outline-primary">APPLY FOR THIS JOB</a>
+                        <a href="mailto:${item.kontak}?subject=[BANGKIT] ${item.namaPerusahaan}: ${item.nama} Job Application&body=Dengan hormat,%0D%0A%0D%0APerkenalkan saya,%0D%0A
+Nama : %0D%0A
+Umur  : %0D%0A
+Jenis Kelamin : %0D%0A
+Pendidikan Terakhir  : %0D%0A
+No. Telepon  : %0D%0A%0D%0A
+
+Dengan surat lamaran ini saya mengajukan permohonan kerja di perusahaan yang Bapak/Ibu pimpin untuk menempati posisi sebagai posisi ${item.nama}. [Masukkan kelebihan dan pengalaman Anda pada posisi yang dipilih].%0D%0A%0D%0A
+
+Sebagai bahan pertimbangan saya telah melampirkan beberapa berkas penting sebagai berikut:%0D%0A
+
+1. Daftar Riwayat Hidup%0D%0A
+
+2. Scan Kartu Tanda Penduduk (KTP)%0D%0A
+
+3. Scan Ijazah Terakhir%0D%0A
+
+4. Scan Surat Keterangan Dokter%0D%0A
+
+5. Pas Photo format .jpeg (1 file)%0D%0A
+
+6. Sertifikat%0D%0A%0D%0A
+
+Demikian surat lamaran kerja yang saya buat, dengan lamaran ini kami berharap agar dapat diterima di perusahaan yang Bapak/Ibu pimpin. Terima kasih.%0D%0A%0D%0A
+
+Hormat saya,%0D%0A
+
+[Masukkan Nama]" class="btn btn-outline-primary">APPLY FOR THIS JOB</a>                        
                     </div>
                 </div>
             </div>
+
         </div>`;
 
 		// Buttom Detail: Job Description
 		detailBottom.innerHTML += `<div class="card border-light mb-5">
-            <div class="card-body" >                
+            <div class="card-body" >                            
                 <h5 class="card-title pb-3">Job Description</h5>
                 <p class="card-text pb-3" >${item.deskripsi.replaceAll("\n", "<br>")}</p>
             </div>
