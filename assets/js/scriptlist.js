@@ -1,7 +1,8 @@
 let API_URL = "https://6352a30bd0bca53a8eb145bc.mockapi.io/api/v1/joblist"
 let jobContainer = document.querySelector('.card-containers'); 
 const form = document.getElementById('form');
-const checkform = document.getElementById('form');
+const checkform = document.getElementById('checkform');
+
 
 // https://6352a30bd0bca53a8eb145bc.mockapi.io/api/v1/joblist?${idsearch}=${value}
 
@@ -42,14 +43,9 @@ function showJobs (result) {
 getJobs(API_URL)
 
 
-// Search function
+// Search bar function
 form.addEventListener('input', async (e) => {
     e.preventDefault();
-
-    // const GET = await fetch(API_URL)
-    // const array = await GET.json()
-    // const data = array.filter(x => x.nama == document.getElementById('nama').value && x.lokasi == document.getElementById('lokasi').value && x.namaPerusahaan == document.getElementById('perusahaan').value && x.kategori == document.getElementById('kategori').value)
-    // console.log(data)
 
     const searchName = document.getElementById('nama').value;
     const searchLocation = document.getElementById('lokasi').value;
@@ -70,8 +66,51 @@ form.addEventListener('input', async (e) => {
 })
 
 
-// Search Checkbox
 
+
+// Search Checkbox
+checkform.addEventListener('input', async (e) => {
+    e.preventDefault();
+
+    
+    if(document.getElementById('fulltime').checked){
+        getJobs(API_URL+'?jenisPekerjaan='+document.getElementById('fulltime').value)
+    } else if (document.getElementById('parttime').checked) {
+        getJobs(API_URL+'?jenisPekerjaan='+document.getElementById('parttime').value)
+    } else if (document.getElementById('internship').checked) {
+        getJobs(API_URL+'?jenisPekerjaan='+document.getElementById('internship').value)
+    } else if (document.getElementById('volunteer').checked) {
+        getJobs(API_URL+'?jenisPekerjaan='+document.getElementById('volunteer').value)
+    } 
+    
+    else if (document.getElementById('D3').checked) {
+        getJobs(API_URL+'?kualifikasi='+document.getElementById('D3').value)
+    } else if (document.getElementById('SMA').checked) {
+        getJobs(API_URL+'?kualifikasi='+document.getElementById('SMA').value)
+    } else if (document.getElementById('sarjana').checked) {
+        getJobs(API_URL+'?kualifikasi='+document.getElementById('sarjana').value)
+    } else if (document.getElementById('magister').checked) {
+        getJobs(API_URL+'?kualifikasi='+document.getElementById('magister').value)
+    } else if (document.getElementById('doctor').checked) {
+        getJobs(API_URL+'?kualifikasi='+document.getElementById('doctor').value)
+    } else if (document.getElementById('none').checked) {
+        getJobs(API_URL+'?kualifikasi='+document.getElementById('none').value)
+    }
+    else {
+        getJobs()
+    }
+    
+})
+
+// Clear Search Button
+
+let resetButton = document.getElementById('clearsearch-button')
+
+function clearSearch() {
+    checkform.reset();
+    form.reset();
+    getJobs(API_URL)
+}
 
 
 
