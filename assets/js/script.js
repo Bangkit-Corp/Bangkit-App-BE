@@ -1,3 +1,5 @@
+let pengguna_sekarang = null;
+
 function logout() {
 	Swal.fire({
 		title: `Logout`,
@@ -14,3 +16,16 @@ function logout() {
 		}
 	});
 }
+
+function checkUserSession() {
+	pengguna_sekarang = JSON.parse(sessionStorage.getItem("User"));
+}
+
+window.onload = function () {
+	checkUserSession();
+	if (pengguna_sekarang != null) {
+		document.getElementById("ini_login").remove();
+	} else {
+		document.getElementById("ini_logout").remove();
+	}
+};
