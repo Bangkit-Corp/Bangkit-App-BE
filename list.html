@@ -14,14 +14,15 @@
     <nav>
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Fist.svg/421px-Fist.svg.png?20210817013142"/>
         <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="home.html">Home</a></li>
             <li><a href="list.html">Loker</a></li>
             <li><a href="login.html">Login</a></li>
         </ul>
     </nav>
 
-    <form id="form">
+    
     <div class="search-bar">
+      <form id="form">
         <input type="text" id="nama" placeholder="Role">
         <input type="text" id="lokasi" placeholder="Location">
         <input type="text" id="perusahaan" placeholder="Company">
@@ -31,9 +32,10 @@
           <option value="IT">IT</option>
           <option value="Pelayanan">Pelayanan</option>
         </select>
-        <input type="range" id="salary" min="0" value=" " max="100.000.000">
+        
+      </form>
     </div>
-    </form>
+   
 
     <div class="job-container">
         <div class="search-checkbox">
@@ -41,25 +43,30 @@
             <hr>
             <span>Schedule</span><br>
             <form id="checkform">
-            <input type="checkbox" id="fulltime">
+            <input type="radio" name="checksearch" id="fulltime" value="Penuh Waktu">
             <label for="fulltime">Full Time</label><br>
-            <input type="checkbox" id="parttime">
+            <input type="radio" name="checksearch" id="parttime" value="Paruh Waktu">
             <label for="parttime">Part Time</label><br>
-            <input type="checkbox" id="internship">
+            <input type="radio" name="checksearch" id="internship" value="Magang">
             <label for="internship">Internship</label><br>
-            <input type="checkbox" id="volunteer">
+            <input type="radio" name="checksearch" id="volunteer" value="Volunter">
             <label for="volunteer">Volunteer</label><br>
             <hr>
             <span>Qualification</span><br>
-            <input type="checkbox" id="sarjana">
+            <input type="radio" name="checksearch" id="SMA" value="SMA">
+            <label for="SMA">SMA/SMK/STM</label><br>
+            <input type="radio" name="checksearch" id="D3" value="D3">
+            <label for="D3">D3 (Diploma)</label><br>
+            <input type="radio" name="checksearch" id="sarjana" value="Sarjana">
             <label for="sarjana">Sarjana (S1)</label><br>
-            <input type="checkbox" id="magister">
+            <input type="radio" name="checksearch" id="magister" value="Magister">
             <label for="magister">Magister (S2)</label><br>
-            <input type="checkbox" id="doctor">
+            <input type="radio" name="checksearch" id="doctor" value="Doktor">
             <label for="Senior">Doktor (S3)</label><br>
-            <input type="checkbox" id="none">
+            <input type="radio" name="checksearch" id="none" value="Tidak ada">
             <label for="none">No Qualification</label><br>
             </form>
+            <button type="button" class="btn btn-light" id="clearsearch-button" style="font-size: small;" onclick="clearSearch()">Clear</button>
             <hr>
         </div>
 

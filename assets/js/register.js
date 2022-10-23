@@ -35,7 +35,7 @@ async function register() {
 		.then((res) => res.json())
 		.then((res) => {
 			console.log(res);
-			window.location = "index.html";
+			window.location = "home.html";
 		});
 }
 
@@ -50,6 +50,6 @@ function checkUserSession() {
 window.onload = function () {
 	checkUserSession();
 	if (pengguna_sekarang != null) {
-		window.location = "index.html";
+		window.location = "home.html";
 	}
 };

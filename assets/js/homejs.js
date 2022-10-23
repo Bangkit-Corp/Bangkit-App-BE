@@ -1,4 +1,4 @@
-let API_URL = "https://6352a30bd0bca53a8eb145bc.mockapi.io/api/v1/joblist?sortBy=createdAt=desc&page=1&limit=3"
+let API_URL = "https://6352a30bd0bca53a8eb145bc.mockapi.io/api/v1/joblist?sortBy=createdAt&order=asc&page=5&limit=3"
 let jobContainer = document.querySelector('.card-containers') 
 
 
@@ -16,7 +16,7 @@ function showJobs (result) {
     jobContainer.innerHTML = '';
 
     result.forEach(jobs => {
-        const{gaji, jenisPekerjaan, kategori, kualifikasi, logo, lokasi, nama, namaPerusahaan} = jobs;
+        const{gaji, jenisPekerjaan, kategori, kualifikasi, logo, lokasi, nama, namaPerusahaan, id} = jobs;
         // const carousel = document.createElement('div')
         // carousel.classList.add('carousel-item')
         const jobElement = document.createElement('div');
@@ -33,7 +33,7 @@ function showJobs (result) {
                   <li class="list-group-item" style="color: rgb(73, 73, 73)">${lokasi}</li>
                 </ul>
                 <div class="card-body bottom">
-                  <a href="#" class="card-link">Apply</a>
+                  <a href="detailJob.html?id=${id}" class="card-link">Apply</a>
                 </div>
         `
         
