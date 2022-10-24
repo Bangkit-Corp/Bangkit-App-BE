@@ -7,7 +7,7 @@
 }
 
 .loginbody {
-	background-color: blueviolet;
+	background-color: rgb(60, 96, 164);
 	font-family: "Poppins", sans-serif;
 }
 
@@ -25,12 +25,12 @@ label {
 
 .btn-login:hover {
 	color: #fff;
-	background-color: #360936;
+	background-color: rgb(38, 66, 117);
 }
 
 .btn-login {
 	width: 100%;
-	background-color: blueviolet;
+	background-color: rgb(60, 96, 164);
 	color: #fff;
 	padding: 6px 12px;
 	border-radius: 8px;
@@ -38,7 +38,7 @@ label {
 }
 
 .text-bg {
-	color: blueviolet;
+	color: rgb(60, 96, 164);
 }
 
 .form-text a {
