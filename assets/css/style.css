@@ -65,6 +65,7 @@ h4 {
 	padding-left: 45px;
 	background-color: white;
 	box-shadow: rgba(0, 0, 0, 0.1) -4px 9px 25px -6px;
+	flex-wrap: nowrap;
 }
 
 .search-bar input,
@@ -188,6 +189,16 @@ select {
 
 @media (max-width: 1200px) {
 	.footer footer #section_register {
+		visibility: hidden;
+		/* display: flex;
+		flex-direction: column;
+		justify-content: flex-end; */
+	}
+}
+
+
+@media (max-width: 700px) {
+	.search-bar {
 		visibility: hidden;
 		/* display: flex;
 		flex-direction: column;
